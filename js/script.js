@@ -2,8 +2,8 @@
 
 {
   const optArticleSelector = '.post',
-  optTitleSelector = '.post-title',
-  optTitleListSelector = '.titles';
+    optTitleSelector = '.post-title',
+    optTitleListSelector = '.titles';
 
   const titleClickHandler = function(event){
     event.preventDefault();
@@ -18,10 +18,10 @@
 
     /* [DONE] add class 'active' to the clicked link */
     clickedElement.classList.add('active');
-    
+
     /* [DONE] remove class 'active' from all articles */
     const activeArticles = document.querySelectorAll('.posts article.active');
-    
+
     for(let activeArticle of activeArticles) {
       activeArticle.classList.remove('active');
     }
@@ -35,7 +35,7 @@
     /* [DONE] add class 'active' to the correct article */
     selectedArticle.classList.add('active');
   };
-  
+
   const generateTitleLinks = function() {
 
     /* remove contents of titleList */
@@ -63,9 +63,9 @@
     }
 
     titleList.innerHTML = html;
-    
+
     const links = document.querySelectorAll('.titles a');
-  
+
     for(let link of links){
       link.addEventListener('click', titleClickHandler);
     }
