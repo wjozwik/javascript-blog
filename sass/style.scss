@@ -130,6 +130,7 @@ body {
 
   &.active {
     display: block;
+    animation: opacityAnimation 0.5s linear;
   }
 }
 
@@ -142,5 +143,20 @@ body {
 
   p {
     margin: 0 10px 0 0;
+  }
+}
+
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+    scale: 101%;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
